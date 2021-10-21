@@ -9,6 +9,7 @@ namespace c
     {
     static void Main(string[] args)
     {
+        const int number = 10;
         Random random = new Random();
 
         for (int i = 0; i < 1; i ++)
@@ -17,13 +18,16 @@ namespace c
         }
 
         Console.ReadLine();
+        Console.WriteLine("Number is " + number);
 
     }
+
     private static void MyRandomNumber(Random random)
     {
-        Console.WriteLine(random.Next(101));
+        Console.WriteLine("Random number is " + random.Next(101));
 
     }
+
     }
 }
 
