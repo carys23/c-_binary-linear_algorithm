@@ -2,29 +2,30 @@
 // Console.WriteLine("Hello, World!");
 using System;
 
-namespace c
+namespace Algorithm
 
 {
     class Program
     {
     static void Main(string[] args)
     {
+        Algorithm.Program.MyRandomNumber();
+
+    }
+
+
+
+    static void MyRandomNumber()
+    {
         const int number = 10;
+        Console.ReadLine();
+        Console.WriteLine("Number is " + number);
         Random random = new Random();
 
         for (int i = 0; i < 1; i ++)
         {
-            MyRandomNumber(random);
+            Console.WriteLine("Random number is " + random.Next(101));
         }
-
-        Console.ReadLine();
-        Console.WriteLine("Number is " + number);
-
-    }
-
-    private static void MyRandomNumber(Random random)
-    {
-        Console.WriteLine("Random number is " + random.Next(101));
 
     }
 
