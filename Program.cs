@@ -10,25 +10,51 @@ namespace Algorithm
     static void Main(string[] args)
     {
         Algorithm.Program.MyRandomNumber();
-
     }
 
 
 
-    static void MyRandomNumber()
-    {
-        const int number = 10;
-        Console.ReadLine();
-        Console.WriteLine("Number is " + number);
-        Random random = new Random();
+    // static void Number()
+    // {
+    //     for (int numbers = 1; numbers <= 20; numbers++)
+    //     Console.WriteLine("Number is " + numbers);
+    // }
 
-        for (int i = 0; i < 1; i ++)
+
+    static void MyRandomNumber()
+
+    {
+
+        Random random = new Random();
+        int random_number = random.Next(10);
+        int numbers = 0;
+        int count = 0;
+
+        for (int num = 1; num <= random_number; num++)
+
         {
-            Console.WriteLine("Random number is " + random.Next(101));
+            numbers = num;
+            // Console.WriteLine("Random number is " + random_number + " and number is "  + numbers);
+
+
+            if ( random_number == numbers)
+        {
+            Console.WriteLine("Found number " + random_number );
+            count += 1;
+            Console.WriteLine("It was found in " + count +  " counts.");
+        }
+
+        else
+        {
+            count += 1;
+
+        }
+
         }
 
     }
 
     }
+
 }
 
