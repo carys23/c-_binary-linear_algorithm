@@ -1,60 +1,53 @@
 ﻿// See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
 using System;
 
-namespace Algorithm
+namespace SerachingAlgorithm
 
 {
-    class Program
+    class BinaryAndLinear
     {
+    const int maxValue = 1000000;
     static void Main(string[] args)
     {
-        Algorithm.Program.MyRandomNumber();
+        Random random = new Random();
+        int randomNumber = random.Next(maxValue);
+        LinearSearch(randomNumber);
     }
 
 
 
-    // static void Number()
-    // {
-    //     for (int numbers = 1; numbers <= 20; numbers++)
-    //     Console.WriteLine("Number is " + numbers);
-    // }
+    static void Binary()
+    {
+
+    }
 
 
-    static void MyRandomNumber()
+
+
+
+    static void LinearSearch(int valueToFind)
 
     {
 
-        Random random = new Random();
-        int random_number = random.Next(10);
-        int numbers = 0;
-        int count = 0;
+        int valueChecked = -1;
 
-        for (int num = 1; num <= random_number; num++)
+        for (int currentValue = 0; currentValue <= maxValue; currentValue++)
 
         {
-            numbers = num;
-            // Console.WriteLine("Random number is " + random_number + " and number is "  + numbers);
+            valueChecked += 1;
 
+            if (currentValue == valueToFind)
+            {
+                Console.WriteLine("Found number " + valueToFind);
+                Console.WriteLine("It was found in " + valueChecked + " counts.");
+                return;
 
-            if ( random_number == numbers)
-        {
-            Console.WriteLine("Found number " + random_number );
-            count += 1;
-            Console.WriteLine("It was found in " + count +  " counts.");
+            }
         }
 
-        else
-        {
-            count += 1;
-
-        }
-
-        }
-
+        Console.WriteLine(valueToFind + "Was not in list");
     }
 
     }
 
 }
-
